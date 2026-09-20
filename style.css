@@ -193,10 +193,11 @@ h2 span,
 }
 
 .portfolio-grid {
+    .portfolio-grid {
     display: grid;
-    grid-template-columns:
- repeat(3,1fr);
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 25px;
+    align-items: start;
 }
 
 @media (max-width: 768px) {
