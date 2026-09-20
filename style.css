@@ -225,10 +225,12 @@ h2 span,
 }
 
 .portfolio-card img {
+    .portfolio-card img {
     width: 100%;
-    height: 150px;
-    object-fit: cover;
+    height: 220px;
+    object-fit: contain;
     display: block;
+    background: #11111a;
 }
 
 .portfolio-info {
