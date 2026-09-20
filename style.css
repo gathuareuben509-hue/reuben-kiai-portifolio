@@ -439,3 +439,8 @@ footer {
         height: 300px;
     }
 }
+.netherlands-design {
+    object-fit: contain;
+    padding: 20px;
+    box-sizing: border-box;
+}
