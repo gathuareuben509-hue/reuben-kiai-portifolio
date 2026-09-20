@@ -92,7 +92,7 @@ h2 span,
 }
 
 .hero-content {
-    max-width: 850px;
+    max-width: 1000px;
 }
 
 .small-title {
@@ -111,10 +111,10 @@ h2 span,
 }
 
 .hero-text {
-    max-width: 650px;
+    max-width: 850px;
     margin: 0 auto 35px;
     color: #b9b9c5;
-    font-size: 18px;
+    font-size: 100px;
 }
 
 .hero-buttons {
