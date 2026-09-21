@@ -214,15 +214,17 @@ h2 span,
 }
 .portfolio-card {
     overflow: hidden;
-    border-radius: 14px;
+    border-radius: 16px;
     background: #171722;
     border: 1px solid rgba(255, 255, 255, 0.08);
-    transition: 0.35s ease;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
 }
 
 .portfolio-card:hover {
     transform: translateY(-8px);
     border-color: #8b5cf6;
+    box-shadow: 0 18px 40px rgba(139, 92, 246, 0.18);
 }
 
 .portfolio-card img {
