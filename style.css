@@ -236,33 +236,32 @@ h2 span,
 @media (max-width: 550px) {
 
     .portfolio-grid {
-        grid-template-columns: repeat(2, 1fr);
-        gap: 8px;
+        grid-template-columns: 1fr;
+        gap: 20px;
     }
 
     .portfolio-card {
-        border-radius: 10px;
+        width: 100%;
+        border-radius: 14px;
     }
 
     .portfolio-card img {
         width: 100%;
-        height: 100px !important;
-        object-fit: cover;
-        padding: 0;
+        height: 240px !important;
+        object-fit: contain;
+        padding: 8px;
     }
 
     .portfolio-info {
-        padding: 7px;
+        padding: 14px;
     }
 
     .portfolio-info h3 {
-        font-size: 12px;
-        margin-bottom: 2px;
+        font-size: 16px;
     }
 
     .portfolio-info p {
-        font-size: 10px;
-        line-height: 1.3;
+        font-size: 13px;
     }
 
     .services-grid {
@@ -270,7 +269,7 @@ h2 span,
     }
 
 }
-
+Why this is better
 /* ==============================
    ABOUT
    ============================== */
