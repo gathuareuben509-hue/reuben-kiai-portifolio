@@ -235,41 +235,37 @@ h2 span,
 
 @media (max-width: 550px) {
 
-    .portfolio-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    .portfolio-card {
-        width: 100%;
-        border-radius: 14px;
-    }
-
-    .portfolio-card img {
-        width: 100%;
-        height: 240px !important;
-        object-fit: contain;
-        padding: 8px;
-    }
-
-    .portfolio-info {
-        padding: 14px;
-    }
-
-    .portfolio-info h3 {
-        font-size: 16px;
-    }
-
-    .portfolio-info p {
-        font-size: 13px;
-    }
-
+    .portfolio-grid,
     .services-grid {
         grid-template-columns: 1fr;
     }
 
+    .hero {
+        min-height: auto;
+        padding: 80px 20px 60px;
+    }
+
+    .hero-text {
+        font-size: 16px;
+    }
+
+    .section {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .nav-links {
+        font-size: 13px;
+        gap: 10px;
+    }
+
+    .portfolio-card img {
+        height: 220px;
+    }
+
 }
-Why this is better
+
+
 /* ==============================
    ABOUT
    ============================== */
