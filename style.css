@@ -235,32 +235,30 @@ h2 span,
 
 @media (max-width: 550px) {
 
-    .portfolio-grid,
-    .services-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .hero {
-        min-height: auto;
-        padding: 80px 20px 60px;
-    }
-
-    .hero-text {
-        font-size: 16px;
-    }
-
-    .section {
-        padding-left: 20px;
-        padding-right: 20px;
-    }
-
-    .nav-links {
-        font-size: 13px;
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
         gap: 10px;
     }
 
     .portfolio-card img {
-        height: 220px;
+        height: 120px;
+        padding: 4px;
+    }
+
+    .portfolio-info {
+        padding: 8px;
+    }
+
+    .portfolio-info h3 {
+        font-size: 13px;
+    }
+
+    .portfolio-info p {
+        font-size: 11px;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
     }
 
 }
