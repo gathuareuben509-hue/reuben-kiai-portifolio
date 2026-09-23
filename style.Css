@@ -1,0 +1,1122 @@
+/* ==================================================
+   REUBEN KIAI PORTFOLIO
+   ================================================== */
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    font-family: "DM Sans", sans-serif;
+
+    background: #080b12;
+
+    color: #f5f5f5;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+}
+
+
+a {
+    color: inherit;
+
+    text-decoration: none;
+}
+
+
+img {
+    display: block;
+
+    width: 100%;
+}
+
+
+span {
+    color: #ffbd17;
+}
+
+
+/* ==================================================
+   HEADER
+   ================================================== */
+
+
+.header {
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    background: rgba(8, 11, 18, 0.88);
+
+    backdrop-filter: blur(15px);
+
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+
+.navbar {
+    width: min(1180px, 90%);
+
+    min-height: 78px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+}
+
+
+.logo {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+
+    letter-spacing: -1px;
+}
+
+
+.logo span {
+    color: #ffbd17;
+}
+
+
+.nav-links {
+    display: flex;
+
+    gap: 30px;
+}
+
+
+.nav-links a {
+    font-size: 14px;
+
+    color: #b9bec8;
+
+    transition: 0.3s;
+}
+
+
+.nav-links a:hover {
+    color: #ffbd17;
+}
+
+
+/* ==================================================
+   HERO
+   ================================================== */
+
+
+.hero {
+    width: min(1180px, 90%);
+
+    min-height: 88vh;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    align-items: center;
+
+    gap: 70px;
+}
+
+
+.hero-content {
+    max-width: 700px;
+}
+
+
+.eyebrow {
+    color: #ffbd17;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+
+    animation: fadeUp 0.8s ease both;
+}
+
+
+.hero h1 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(48px, 7vw, 88px);
+
+    line-height: 0.98;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+
+    animation: fadeUp 1s ease both;
+}
+
+
+.hero h1 span {
+    display: block;
+
+    color: #ffbd17;
+}
+
+
+.hero-description {
+    max-width: 600px;
+
+    color: #9da5b3;
+
+    font-size: 17px;
+
+    margin-bottom: 35px;
+
+    animation: fadeUp 1.2s ease both;
+}
+
+
+.hero-buttons {
+    display: flex;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    animation: fadeUp 1.4s ease both;
+}
+
+
+.button {
+    padding: 14px 23px;
+
+    border-radius: 50px;
+
+    font-size: 14px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.button-primary {
+    background: #ffbd17;
+
+    color: #080b12;
+}
+
+
+.button-primary:hover {
+    transform: translateY(-4px);
+
+    box-shadow: 0 10px 30px rgba(255,189,23,0.2);
+}
+
+
+.button-outline {
+    border: 1px solid #333945;
+
+    color: #fff;
+}
+
+
+.button-outline:hover {
+    border-color: #ffbd17;
+
+    color: #ffbd17;
+}
+
+
+/* ==================================================
+   ANIMATED PROFILE
+   ================================================== */
+
+
+.profile-container {
+    width: 390px;
+
+    height: 390px;
+
+    margin: auto;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    animation: floating 5s ease-in-out infinite;
+}
+
+
+.profile-circle {
+    width: 250px;
+
+    height: 250px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #263247,
+            #111827 65%
+        );
+
+    border: 2px solid #ffbd17;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    position: relative;
+
+    z-index: 3;
+
+    box-shadow:
+        0 0 50px rgba(255,189,23,0.12);
+}
+
+
+.profile-initials {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 70px;
+
+    font-weight: 700;
+
+    color: #ffbd17;
+
+    letter-spacing: -5px;
+}
+
+
+/* rotating rings */
+
+
+.orbit {
+    position: absolute;
+
+    border: 1px solid rgba(255,189,23,0.35);
+
+    border-radius: 50%;
+}
+
+
+.orbit-one {
+    width: 310px;
+
+    height: 310px;
+
+    animation: rotate 12s linear infinite;
+}
+
+
+.orbit-two {
+    width: 370px;
+
+    height: 370px;
+
+    border-style: dashed;
+
+    border-color: rgba(255,255,255,0.12);
+
+    animation: rotateReverse 18s linear infinite;
+}
+
+
+/* decorative dots */
+
+
+.floating-dot {
+    position: absolute;
+
+    width: 12px;
+
+    height: 12px;
+
+    border-radius: 50%;
+
+    background: #ffbd17;
+
+    box-shadow: 0 0 15px rgba(255,189,23,0.5);
+}
+
+
+.dot-one {
+    top: 30px;
+
+    right: 75px;
+}
+
+
+.dot-two {
+    bottom: 55px;
+
+    left: 40px;
+
+    width: 8px;
+
+    height: 8px;
+}
+
+
+.dot-three {
+    top: 100px;
+
+    left: 20px;
+
+    width: 6px;
+
+    height: 6px;
+}
+
+
+/* ==================================================
+   INTRO
+   ================================================== */
+
+
+.intro {
+    border-top: 1px solid #202530;
+
+    border-bottom: 1px solid #202530;
+
+    padding: 75px 5% !important;
+
+    width: 100% !important;
+}
+
+
+.intro p {
+    max-width: 850px;
+
+    margin: auto;
+
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(25px, 4vw, 42px);
+
+    line-height: 1.2;
+
+    text-align: center;
+
+    color: #e4e6eb;
+}
+
+
+/* ==================================================
+   GENERAL SECTION
+   ================================================== */
+
+
+.section {
+    width: min(1180px, 90%);
+
+    margin: auto;
+
+    padding: 120px 0;
+}
+
+
+.section-label {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    color: #8e96a4;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+.section-label span {
+    color: #ffbd17;
+}
+
+
+.section h2 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: clamp(40px, 6vw, 68px);
+
+    line-height: 1;
+
+    letter-spacing: -3px;
+}
+
+
+/* ==================================================
+   ABOUT
+   ================================================== */
+
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: start;
+}
+
+
+.about-text {
+    padding-top: 10px;
+}
+
+
+.about-text p {
+    color: #9da5b3;
+
+    margin-bottom: 22px;
+
+    font-size: 16px;
+}
+
+
+.about-text strong {
+    color: #fff;
+}
+
+
+/* ==================================================
+   WORK
+   ================================================== */
+
+
+.section-heading {
+    margin-bottom: 55px;
+}
+
+
+.section-heading > p {
+    color: #8f98a7;
+
+    max-width: 600px;
+
+    margin-top: 25px;
+}
+
+
+.portfolio-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 30px;
+}
+
+
+.portfolio-card {
+    background: #10151f;
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    border: 1px solid #1d2430;
+
+    transition: 0.4s ease;
+}
+
+
+.portfolio-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #3b424f;
+}
+
+
+.portfolio-image {
+    aspect-ratio: 4 / 3;
+
+    overflow: hidden;
+
+    background: #111827;
+}
+
+
+.portfolio-image img {
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: transform 0.6s ease;
+}
+
+
+.portfolio-card:hover img {
+    transform: scale(1.04);
+}
+
+
+.portfolio-info {
+    padding: 22px 23px 25px;
+}
+
+
+.portfolio-info span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 700;
+}
+
+
+.portfolio-info h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 23px;
+
+    margin-top: 7px;
+}
+
+
+/* ==================================================
+   SERVICES
+   ================================================== */
+
+
+.services h2 {
+    margin-bottom: 60px;
+}
+
+
+.services-list {
+    border-top: 1px solid #252b35;
+}
+
+
+.service {
+    display: grid;
+
+    grid-template-columns: 80px 1fr;
+
+    gap: 30px;
+
+    padding: 35px 0;
+
+    border-bottom: 1px solid #252b35;
+
+    transition: 0.3s;
+}
+
+
+.service > span {
+    font-size: 13px;
+
+    font-weight: 700;
+}
+
+
+.service h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 27px;
+
+    margin-bottom: 5px;
+}
+
+
+.service p {
+    color: #8f98a7;
+
+    max-width: 600px;
+}
+
+
+.service:hover {
+    padding-left: 12px;
+}
+
+
+/* ==================================================
+   PROCESS
+   ================================================== */
+
+
+.process h2 {
+    margin-bottom: 60px;
+}
+
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+
+.process-grid > div {
+    padding-top: 25px;
+
+    border-top: 1px solid #333945;
+}
+
+
+.process-grid strong {
+    color: #ffbd17;
+
+    font-size: 14px;
+}
+
+
+.process-grid h3 {
+    font-family: "Space Grotesk", sans-serif;
+
+    font-size: 23px;
+
+    margin: 20px 0 8px;
+}
+
+
+.process-grid p {
+    color: #8f98a7;
+
+    font-size: 14px;
+}
+
+
+/* ==================================================
+   CONTACT
+   ================================================== */
+
+
+.contact {
+    width: 100%;
+
+    background: #10151f;
+
+    border-top: 1px solid #202630;
+
+    border-bottom: 1px solid #202630;
+}
+
+
+.contact-content {
+    width: min(1180px, 90%);
+
+    margin: auto;
+
+    padding: 120px 0;
+}
+
+
+.contact h2 {
+    max-width: 850px;
+
+    margin-bottom: 25px;
+}
+
+
+.contact-content > p {
+    color: #929baa;
+
+    max-width: 500px;
+
+    margin-bottom: 35px;
+}
+
+
+.contact-button {
+    display: inline-block;
+
+    padding: 17px 28px;
+
+    background: #ffbd17;
+
+    color: #080b12;
+
+    border-radius: 50px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+
+.contact-button:hover {
+    transform: translateY(-4px);
+}
+
+
+/* ==================================================
+   FOOTER
+   ================================================== */
+
+
+footer {
+    width: min(1180px, 90%);
+
+    margin: auto;
+
+    padding: 40px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    color: #78818f;
+
+    font-size: 13px;
+}
+
+
+footer strong {
+    color: #fff;
+
+    font-family: "Space Grotesk", sans-serif;
+}
+
+
+footer p {
+    margin-top: 4px;
+}
+
+
+/* ==================================================
+   ANIMATIONS
+   ================================================== */
+
+
+@keyframes floating {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-12px);
+    }
+
+}
+
+
+@keyframes rotate {
+
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+
+}
+
+
+@keyframes rotateReverse {
+
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+
+}
+
+
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+
+        transform: translateY(0);
+    }
+
+}
+
+
+/* ==================================================
+   TABLET
+   ================================================== */
+
+
+@media (max-width: 900px) {
+
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 90px 0;
+    }
+
+
+    .hero-description {
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+
+    .profile-container {
+        order: -1;
+
+        width: 320px;
+
+        height: 320px;
+    }
+
+
+    .profile-circle {
+        width: 210px;
+
+        height: 210px;
+    }
+
+
+    .orbit-one {
+        width: 260px;
+
+        height: 260px;
+    }
+
+
+    .orbit-two {
+        width: 310px;
+
+        height: 310px;
+    }
+
+
+    .about-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==================================================
+   PHONE
+   ================================================== */
+
+
+@media (max-width: 600px) {
+
+
+    .navbar {
+        min-height: 65px;
+    }
+
+
+    .logo {
+        font-size: 21px;
+    }
+
+
+    .nav-links {
+        gap: 13px;
+    }
+
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+
+    .hero {
+        width: 88%;
+
+        min-height: auto;
+
+        padding: 75px 0 90px;
+
+        gap: 50px;
+    }
+
+
+    .hero h1 {
+        font-size: 46px;
+
+        letter-spacing: -2.5px;
+    }
+
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+
+    .profile-container {
+        width: 270px;
+
+        height: 270px;
+    }
+
+
+    .profile-circle {
+        width: 175px;
+
+        height: 175px;
+    }
+
+
+    .profile-initials {
+        font-size: 50px;
+    }
+
+
+    .orbit-one {
+        width: 215px;
+
+        height: 215px;
+    }
+
+
+    .orbit-two {
+        width: 260px;
+
+        height: 260px;
+    }
+
+
+    .dot-one {
+        top: 25px;
+
+        right: 30px;
+    }
+
+
+    .section {
+        padding: 80px 0;
+    }
+
+
+    .section h2 {
+        font-size: 43px;
+
+        letter-spacing: -2px;
+    }
+
+
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .portfolio-image {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    .service {
+        grid-template-columns: 45px 1fr;
+
+        gap: 15px;
+    }
+
+
+    .service h3 {
+        font-size: 22px;
+    }
+
+
+    .process-grid {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .contact-content {
+        padding: 85px 0;
+    }
+
+
+    footer {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 20px;
+    }
+
+}
+
+
+/* ==================================================
+   REDUCED MOTION
+   ================================================== */
+
+
+@media (prefers-reduced-motion: reduce) {
+
+    *,
+    *::before,
+    *::after {
+
+        animation-duration: 0.01ms !important;
+
+        animation-iteration-count: 1 !important;
+
+        scroll-behavior: auto !important;
+
+        transition-duration: 0.01ms !important;
+
+    }
+
+}
