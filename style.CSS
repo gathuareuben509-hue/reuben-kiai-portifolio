@@ -1,0 +1,585 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #07111f;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* ================= NAVIGATION ================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(7, 17, 31, 0.95);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar {
+    width: min(1150px, 92%);
+    margin: auto;
+
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: "Montserrat", sans-serif;
+    font-size: 22px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo span {
+    color: #ffbd17;
+}
+
+.nav-links {
+    display: flex;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ffbd17;
+}
+
+
+/* ================= GENERAL ================= */
+
+.section {
+    width: min(1150px, 92%);
+    margin: auto;
+    padding: 100px 0;
+}
+
+.small-title {
+    color: #ffbd17;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.section-heading {
+    max-width: 700px;
+    margin-bottom: 50px;
+}
+
+.section-heading h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(32px, 5vw, 55px);
+    line-height: 1.1;
+    margin-bottom: 18px;
+}
+
+.section-heading h2 span {
+    color: #ffbd17;
+}
+
+.section-description {
+    color: #aeb9c9;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    width: min(1150px, 92%);
+    min-height: 90vh;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: 1fr 0.8fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-content h1 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(45px, 7vw, 82px);
+    line-height: 0.98;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    display: block;
+    color: #ffbd17;
+}
+
+.hero-text {
+    max-width: 620px;
+    color: #b7c2d2;
+    font-size: 17px;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 14px 25px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.primary-btn {
+    background: #ffbd17;
+    color: #07111f;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+}
+
+.secondary-btn {
+    border: 1px solid #ffbd17;
+    color: #ffffff;
+}
+
+.secondary-btn:hover {
+    background: #ffbd17;
+    color: #07111f;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+}
+
+.hero-image img {
+    width: 100%;
+    max-width: 430px;
+    border-radius: 18px;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.5);
+}
+
+
+/* ================= ABOUT ================= */
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 60px;
+}
+
+.about-text p {
+    color: #b7c2d2;
+    margin-bottom: 20px;
+}
+
+.about-box {
+    background: #101e31;
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 35px;
+    border-radius: 18px;
+}
+
+.about-box h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    color: #b7c2d2;
+}
+
+.about-box .approach-title {
+    color: #ffbd17;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+
+/* ================= SKILLS ================= */
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.skill-card {
+    background: #101e31;
+    padding: 28px 20px;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.07);
+    transition: 0.3s;
+}
+
+.skill-card:hover {
+    transform: translateY(-7px);
+    border-color: #ffbd17;
+}
+
+.skill-icon {
+    width: 55px;
+    height: 55px;
+    display: grid;
+    place-items: center;
+
+    background: #ffbd17;
+    color: #07111f;
+
+    border-radius: 12px;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+.skill-card h3 {
+    margin-bottom: 8px;
+}
+
+.skill-card p {
+    color: #aeb9c9;
+    font-size: 14px;
+}
+
+
+/* ================= PORTFOLIO ================= */
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.portfolio-card {
+    background: #101e31;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid rgba(255,255,255,0.07);
+    transition: 0.3s;
+}
+
+.portfolio-card:hover {
+    transform: translateY(-7px);
+    border-color: #ffbd17;
+}
+
+.portfolio-image {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #0c1727;
+}
+
+.portfolio-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.portfolio-card:hover img {
+    transform: scale(1.04);
+}
+
+.portfolio-info {
+    padding: 20px;
+}
+
+.portfolio-info > span {
+    color: #ffbd17;
+    font-size: 12px;
+    font-weight: 800;
+}
+
+.portfolio-info h3 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 20px;
+    margin: 5px 0 8px;
+}
+
+.portfolio-info p {
+    color: #aeb9c9;
+    font-size: 14px;
+}
+
+
+/* ================= SERVICES ================= */
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.service-card {
+    padding: 30px;
+    background: #101e31;
+    border-radius: 15px;
+    border: 1px solid rgba(255,255,255,0.07);
+}
+
+.service-card span {
+    color: #ffbd17;
+    font-weight: 800;
+}
+
+.service-card h3 {
+    margin: 12px 0;
+    font-size: 20px;
+}
+
+.service-card p {
+    color: #aeb9c9;
+    font-size: 14px;
+}
+
+
+/* ================= PROCESS ================= */
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.process-step {
+    padding: 25px 18px;
+    background: #101e31;
+    border-radius: 15px;
+}
+
+.process-step span {
+    color: #ffbd17;
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.process-step h3 {
+    margin: 10px 0;
+}
+
+.process-step p {
+    color: #aeb9c9;
+    font-size: 13px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    padding-bottom: 80px;
+}
+
+.contact-box {
+    background: linear-gradient(
+        135deg,
+        #101e31,
+        #132b48
+    );
+
+    border-radius: 22px;
+    padding: 70px 50px;
+    text-align: center;
+}
+
+.contact-box h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: clamp(35px, 6vw, 65px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.contact-box h2 span {
+    color: #ffbd17;
+}
+
+.contact-box > p:not(.small-title) {
+    color: #b7c2d2;
+    max-width: 550px;
+    margin: auto auto 25px;
+}
+
+.contact-details {
+    margin-bottom: 30px;
+}
+
+.contact-details p {
+    margin: 7px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    text-align: center;
+    padding: 45px 20px;
+    background: #050c16;
+}
+
+footer h3 {
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 5px;
+}
+
+footer p {
+    color: #aeb9c9;
+    font-size: 14px;
+}
+
+footer .copyright {
+    margin-top: 15px;
+    font-size: 12px;
+}
+
+
+/* ================= TABLET ================= */
+
+@media (max-width: 900px) {
+
+    .hero {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 70px 0;
+    }
+
+    .hero-text {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-image {
+        order: -1;
+    }
+
+    .hero-image img {
+        max-width: 330px;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* ================= PHONE ================= */
+
+@media (max-width: 600px) {
+
+    .navbar {
+        min-height: 65px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    .nav-links {
+        gap: 12px;
+    }
+
+    .nav-links a {
+        font-size: 11px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 60px 0 80px;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+    }
+
+    .hero-image img {
+        width: 75%;
+        max-width: 280px;
+    }
+
+    .skills-grid,
+    .portfolio-grid,
+    .services-grid,
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /*
+       IMPORTANT:
+       Portfolio images are controlled by aspect-ratio,
+       so they will NOT become extremely tall on phones.
+    */
+
+    .portfolio-image {
+        aspect-ratio: 4 / 3;
+    }
+
+    .portfolio-info {
+        padding: 18px;
+    }
+
+    .contact-box {
+        padding: 50px 22px;
+    }
+
+    .btn {
+        width: 100%;
+        text-align: center;
+    }
+
+}
