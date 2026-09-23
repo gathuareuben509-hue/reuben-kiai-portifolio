@@ -1,0 +1,69 @@
+// ===============================
+// REUBEN KIAI PORTFOLIO
+// JavaScript
+// ===============================
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Smooth navigation
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    navLinks.forEach(link => {
+
+        link.addEventListener("click", () => {
+
+            navLinks.forEach(item => {
+                item.classList.remove("active");
+            });
+
+            link.classList.add("active");
+
+        });
+
+    });
+
+
+    // Reveal sections while scrolling
+    const sections = document.querySelectorAll(".section");
+
+    const revealSections = () => {
+
+        sections.forEach(section => {
+
+            const position =
+                section.getBoundingClientRect().top;
+
+            const windowHeight =
+                window.innerHeight;
+
+            if (position < windowHeight - 100) {
+
+                section.classList.add("show");
+
+            }
+
+        });
+
+    };
+
+
+    window.addEventListener("scroll", revealSections);
+
+    revealSections();
+
+
+    // Portfolio image click effect
+    const portfolioImages =
+        document.querySelectorAll(".portfolio-image img");
+
+    portfolioImages.forEach(image => {
+
+        image.addEventListener("click", () => {
+
+            image.classList.toggle("zoomed");
+
+        });
+
+    });
+
+});
